@@ -1,0 +1,160 @@
+<html>
+<head>
+ <title>Season Collection</title>
+
+ <link href="{{ url_for('static', filename='css/style.css') }}"
+   rel="stylesheet" />
+
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+   rel="stylesheet" />
+
+<style>
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: 300px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px 6px;
+    float: left;
+    width: 50%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+ </style>
+</head>
+
+<body>
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+   <div class="navbar-header">
+    <button type="button"  class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+     aria-controls="navbar">
+     <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+
+     </button>
+    <a class="navbar-brand" href="index.html">Fashion Season Collection</a>
+    </div>
+
+    <div id="navbar" class"=collapse navbar-collapse">
+     <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+	   <li class="active"><a href="all.html">Season Bundle</a></li>
+      <li><a href="tops.html">Tops</a></li>
+      <li><a href="bottoms.html">Bottoms</a></li>
+      <li><a href="shoes.html">Shoes</a></li>
+      <li><a href="accessories.html">Accessories</a></li>
+     </ul>
+   </div>
+   </div>
+ </nav>
+
+     <div class="container">
+      
+<br><br><br>
+
+
+<h2>Spring Bundle</h2>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{ url_for('static', filename='img/tops/floral-top.jpg') }}">
+      <img src="{{ url_for('static', filename='img/tops/floral-top.jpg') }}"
+ alt="floral top" width="600" height="400">
+    </a>
+    <div class="desc"><p><strong>Floral top</strong></p>
+<p>Black Floral top  is perfect for spring and summer time.</p>
+ </div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{ url_for('static', filename='img/bottoms/white-trouser.jpg') }}">
+      <img src="{{ url_for('static', filename='img/bottoms/white-trouser.jpg') }}"
+ alt="plain white top" width="600" height="400">
+    </a>
+    <div class="desc"><p><strong>Shein Bardot Neckline Cross Wrap Sweater</strong> </p>
+	
+	<p>Plain Red Sexy Pullovers Loose V Neck Long Sleeve Fall Winter Fabric has some stretch Elegant Acrylic Off the Shoulder Sweaters</p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{ url_for('static', filename='img/shoes/pinkshoes.jpg') }}">
+      <img src="{{ url_for('static', filename='img/shoes/pinkshoes.jpg') }}"
+ width="600" height="400">
+    </a>
+    <div class="desc"><p><strong>Shein Vented Hem Chunky Knit Crop Jumper</strong></p>
+<p>Plain Grey Casual Pullovers Loose Crew Neck Long Sleeve Fall Winter Fabric has some stretch </p></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{ url_for('static', filename='img/accessories/hairacc.jpg') }}">
+      <img src="{{ url_for('static', filename='img/accessories/hairacc.jpg') }}"
+ width="600" height="400">
+    </a>
+    <div class="desc"><p><strong>Sweaters & Cardigans Cable Knit Thickening Cardigan</strong></p>
+
+<p>Rosegal Type: Cardigans Material: Spandex Sleeve Length: Full Collar: Collarless Style: Fashion Pattern Type: Solid Season: Fall,Winter </p></div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  <p>You can select </p>
+</div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+       
+    {% extends "footer.html"%}
+   </body>
+</html>
+  

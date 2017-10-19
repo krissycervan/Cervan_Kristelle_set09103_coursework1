@@ -1,0 +1,155 @@
+<html>
+<head>
+ <title>Season Collection</title>
+
+ <link href="{{ url_for('static', filename='css/style.css') }}"
+   rel="stylesheet" />
+
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+   rel="stylesheet" />
+
+<style>
+div.gallery {
+    border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: 300px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px 6px;
+    float: left;
+    width: 50%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+ </style>
+</head>
+
+<body>
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+   <div class="navbar-header">
+    <button type="button"  class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+     aria-controls="navbar">
+     <span class="sr-only">Toggle navigation</span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+
+     </button>
+    <a class="navbar-brand" href="index.html">Fashion Season Collection</a>
+    </div>
+
+    <div id="navbar" class"=collapse navbar-collapse">
+     <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tops.html">Tops</a></li>
+      <li><a href="bottoms.html">Bottoms</a></li>
+      <li><a href="shoes.html">Shoes</a></li>
+      <li class="active"><a href="accessories.html">Accessories</a></li>
+     </ul>
+   </div>
+   </div>
+ </nav>
+
+     <div class="container">
+      <h2>Select Season</h2>
+
+
+<h2>Accessories</h2>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href=""{{ url_for('static', filename='img/accessories/hairacc.jpg') }}">
+      <img src="{{ url_for('static', filename='img/accessories/hairacc.jpg') }}"
+ alt="spring tops" width="600" height="400">
+    </a>
+    <div class="desc">Spring Collections</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{ url_for('static', filename='img/accessories/sunglasses.jpg') }}">
+      <img src="{{ url_for('static', filename='img/accessories/sunglasses.jpg') }}"
+ alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Summer Collections</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{ url_for('static', filename='img/accessories/scarf.jpg') }}">
+      <img src="{{ url_for('static', filename='img/accessories/scarf.jpg') }}"
+ width="600" height="400">
+    </a>
+    <div class="desc">Fall Collections</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="{{ url_for('static', filename='img/accessories/hatgloves.jpg') }}">
+      <img src="{{ url_for('static', filename='img/accessories/hatgloves.jpg') }}"
+ width="600" height="400">
+    </a>
+    <div class="desc">Winter Collections</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  <p>You can select </p>
+</div>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+       
+    {% extends "footer.html"%}
+   </body>
+</html>
+  
+
+
+
