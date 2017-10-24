@@ -21,16 +21,17 @@
       
 <br>
 
-<h2>Pink Shoes</h2>
+<h2>Black Leggings</h2>
 <!--gallery-->
 
 <div class="responsive">
   <div class="gallery">
-      <img src="{{ url_for('static', filename='img/shoes/pinkshoes.jpg') }}"
+      <img src="{{ url_for('static', filename='img/bottoms/blackleggings.jpg') }}"
         width="600" height="400"></a>
-		<!--json desc-->
+		<br><br><br><br>
+		<!--json-->
     <div class="desc">
-		{% for desc in pinkshoes.desc %}
+		{% for desc in leggings.desc %}
             	{{ desc }}
         	{% endfor %}
 	</div>

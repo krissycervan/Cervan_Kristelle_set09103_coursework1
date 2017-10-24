@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for, abort, json
 app = Flask(__name__)
-#routes to pages
+#routes to main pages and images
 @app.route('/')
 @app.route('/index')
 def index():
@@ -14,34 +14,66 @@ def tops():
 @app.route('/tops')
 @app.route('/tops/floral')
 def tops_floral():
- start = '<img src="'
- url = url_for('static', filename='img/tops/floral-top.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Black Floral Top":
+       print item
+       p = item
+
+ return render_template('blackfloral.html', blackfloral=p), 200
  
 @app.route('/tops')
 @app.route('/tops/croptop')
 def tops_croptop():
- start = '<img src="'
- url = url_for('static', filename='img/tops/croptop.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Stripes Croptop":
+       print item
+       p = item
+
+ return render_template('croptop.html', croptop=p), 200
  
 @app.route('/tops')
 @app.route('/tops/chokersweater')
 def tops_chokersweater():
- start = '<img src="'
- url = url_for('static', filename='img/tops/chokersweater.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Purple Knit Sweater":
+       print item
+       p = item
+
+ return render_template('purplesweater.html', sweater=p), 200
 
 @app.route('/tops')
 @app.route('/tops/poncho')
 def tops_poncho():
- start = '<img src="'
- url = url_for('static', filename='img/tops/poncho.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Navy Poncho Top":
+       print item
+       p = item
+
+ return render_template('poncho.html', poncho=p), 200
 
 @app.route('/bottoms')
 def bottoms():
@@ -50,34 +82,66 @@ def bottoms():
 @app.route('/botoms')
 @app.route('/bottoms/whitetrouser')
 def bottoms_whitetrouser():
- start = '<img src="'
- url = url_for('static', filename='img/bottoms/white-trouser.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "White Trouser":
+       print item
+       p = item
+
+ return render_template('whitetrouser.html', whitetrouser=p), 200
  
 @app.route('/bottoms')
 @app.route('/bottoms/jeans')
 def bottoms_jeans():
- start = '<img src="'
- url = url_for('static', filename='img/bottoms/jeans.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Blue Skinny Jeans":
+       print item
+       p = item
+
+ return render_template('blueskinnyjeans.html', bluejeans=p), 200
  
 @app.route('/bottoms')
 @app.route('/bottoms/shorts')
 def bottoms_shorts():
- start = '<img src="'
- url = url_for('static', filename='img/bottoms/blueshorts.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Blue Denim Shorts":
+       print item
+       p = item
+
+ return render_template('blueshorts.html', shorts=p), 200
 
 @app.route('/bottoms')
 @app.route('/bottoms/leggings')
 def bottoms_leggings():
- start = '<img src="'
- url = url_for('static', filename='img/bottoms/blackleggings.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Ankle length leggings (black)":
+       print item
+       p = item
+
+ return render_template('leggings.html', leggings=p), 200
  
 
 
@@ -88,34 +152,70 @@ def shoes():
 @app.route('/shoes')
 @app.route('/shoes/pinkshoes')
 def shoes_pinkshoes():
- start = '<img src="'
- url = url_for('static', filename='img/shoes/pinkshoes.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Pink Shoes":
+       print item
+       p = item
+
+ return render_template('pinkshoes.html', pinkshoes=p), 200
+ 
  
 @app.route('/shoes')
 @app.route('/shoes/sandals')
 def shoes_sandals():
- start = '<img src="'
- url = url_for('static', filename='img/shoes/sandals.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Tan Sandals":
+       print item
+       p = item
+
+ return render_template('sandals.html', sandals=p), 200
+ 
  
 @app.route('/shoes')
 @app.route('/shoes/ankleboots')
 def shoes_ankleboots():
- start = '<img src="'
- url = url_for('static', filename='img/shoes/ankleboots.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Faux Suede Ankle Boots":
+       print item
+       p = item
+
+ return render_template('ankleboots.html', ankleboots=p), 200
+ 
 
 @app.route('/shoes')
 @app.route('/shoes/longboots')
 def shoes_longboots():
- start = '<img src="'
- url = url_for('static', filename='img/shoes/longboots.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Dark Brown Longboots":
+       print item
+       p = item
+
+ return render_template('longboots.html', longboots=p), 200
+ 
 
 @app.route('/accessories')
 def accessories():
@@ -124,39 +224,76 @@ def accessories():
 @app.route('/accessories')
 @app.route('/accessories/hairaccessory')
 def accessories_hairaccessory():
- start = '<img src="'
- url = url_for('static', filename='img/accessories/hairacc.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Flower Hair Accessory":
+       print item
+       p = item
+
+ return render_template('hairacc.html', hairacc=p), 200
+ 
  
 @app.route('/accessories')
 @app.route('/accessories/sunglasses')
 def accessories_sunglasses():
- start = '<img src="'
- url = url_for('static', filename='img/accessories/sunglasses.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Cateye Sunglasses":
+       print item
+       p = item
+
+ return render_template('sunglasses.html', sunglasses=p), 200
+ 
  
 @app.route('/accessories')
 @app.route('/accessories/scarf')
 def accessories_scarf():
- start = '<img src="'
- url = url_for('static', filename='img/accessories/scarf.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Classic Waffle Knit Scarf (Grey)":
+       print item
+       p = item
+
+ return render_template('scarf.html', scarf=p), 200
+ 
 
 @app.route('/accessories')
 @app.route('/accessories/hatgloves')
 def accessories_hatgloves():
- start = '<img src="'
- url = url_for('static', filename='img/accessories/hatgloves.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "People Tree Grey Gloves and Hat":
+       print item
+       p = item
+
+ return render_template('hatgloves.html', hatgloves=p), 200
  
+
+#Seasons Outfits links 
 @app.route('/all')
 def all():
  return render_template('all.html'), 200
-
+#Spring
 @app.route('/all')
 @app.route('/all/springstyle')
 def springstyle():
@@ -166,20 +303,38 @@ def springstyle():
 @app.route('/all/springstyle')
 @app.route('/all/springstyle/top')
 def all_springstyle_top():
- start = '<img src="'
- url = url_for('static', filename='img/tops/floral-top.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Black Floral Top":
+       print item
+       p = item
+
+ return render_template('blackfloral.html', blackfloral=p), 200
 
 @app.route('/all')
 @app.route('/all/springstyle')
 @app.route('/all/springstyle/bottom')
 def all_springstyle_bottom():
- start = '<img src="'
- url = url_for('static', filename='img/bottoms/white-trouser.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
 
+ p = {}
+ for item in clothes:
+     if item['name'] == "Black Floral Top":
+       print item
+       p = item
+
+ return render_template('whitetrouser.html', whitetrouser=p), 200
+
+@app.route('/all')
+@app.route('/all/springstyle')
 @app.route('/all/springstyle/shoes')
 def all_springstyle_shoes():
  clothes = []
@@ -195,16 +350,24 @@ def all_springstyle_shoes():
 
  return render_template('pinkshoes.html', pinkshoes=p), 200
 
-
 @app.route('/all')
 @app.route('/all/springstyle')
 @app.route('/all/springstyle/accessory')
 def all_springstyle_accessory():
- start = '<img src="'
- url = url_for('static', filename='img/accessories/hairacc.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Flower Hair Accessory":
+       print item
+       p = item
+
+ return render_template('hairacc.html', hairacc=p), 200
  
+#Summer
 @app.route('/all')
 @app.route('/all/summerstyle')
 def summerstyle():
@@ -214,38 +377,71 @@ def summerstyle():
 @app.route('/all/summerstyle')
 @app.route('/all/summerstyle/top')
 def all_summerstyle_top():
- start = '<img src="'
- url = url_for('static', filename='img/tops/croptop.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Stripes Croptop":
+       print item
+       p = item
+
+ return render_template('croptop.html', croptop=p), 200
 
 @app.route('/all')
 @app.route('/all/summerstyle')
 @app.route('/all/summerstyle/bottom')
 def all_summerstyle_bottom():
- start = '<img src="'
- url = url_for('static', filename='img/bottoms/blueshorts.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Blue Denim Shorts":
+       print item
+       p = item
+
+ return render_template('blueshorts.html', shorts=p), 200
 
 @app.route('/all')
 @app.route('/all/summerstyle')
 @app.route('/all/summerstyle/shoes')
 def all_summerstyle_shoes():
- start = '<img src="'
- url = url_for('static', filename='img/shoes/sandals.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Tan Sandals":
+       print item
+       p = item
+
+ return render_template('sandals.html', sandals=p), 200
 
 @app.route('/all')
 @app.route('/all/summerstyle')
 @app.route('/all/summerstyle/accessory')
 def all_summerstyle_accessory():
- start = '<img src="'
- url = url_for('static', filename='img/accessories/sunglasses.jpg')
- end = '">'
- return start+url+end, 200
- 
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Cateye Sunglass":
+       print item
+       p = item
+
+ return render_template('sunglasses.html', sunglasses=p), 200
+
+#Fall
 @app.route('/all')
 @app.route('/all/fallstyle')
 def fallstyle():
@@ -255,39 +451,72 @@ def fallstyle():
 @app.route('/all/fallstyle')
 @app.route('/all/fallstyle/top')
 def all_fallstyle_top():
- start = '<img src="'
- url = url_for('static', filename='img/tops/chokersweater.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Purple Knit Sweater":
+       print item
+       p = item
+
+ return render_template('purplesweater.html', sweater=p), 200
 
 @app.route('/all')
 @app.route('/all/fallstyle')
 @app.route('/all/fallstyle/bottom')
 def all_fallstyle_bottom():
- start = '<img src="'
- url = url_for('static', filename='img/bottoms/jeans.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Blue Skinny Jeans":
+       print item
+       p = item
+
+ return render_template('blueskinnyjeans.html', bluejeans=p), 200
 
 @app.route('/all')
 @app.route('/all/fallstyle')
 @app.route('/all/fallstyle/shoes')
 def all_fallstyle_shoes():
- start = '<img src="'
- url = url_for('static', filename='img/shoes/ankleboots.jpg')
- end = '">'
- return start+url+end, 200
+  clothes = []
+  with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+  
+  p = {}
+  for item in clothes:
+     if item['name'] == "Faux Suede Ankle Boots":
+       print item
+       p = item
+
+  return render_template('ankleboots.html', ankleboots=p), 200
 
 @app.route('/all')
 @app.route('/all/fallstyle')
 @app.route('/all/fallstyle/accessory')
 def all_fallstyle_accessory():
- start = '<img src="'
- url = url_for('static', filename='img/accessories/scarf.jpg')
- end = '">'
- return start+url+end, 200
- 
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
 
+ p = {}
+ for item in clothes:
+     if item['name'] == "Classic Waffle Knit Scarf (Grey)":
+       print item
+       p = item
+
+ return render_template('scarf.html', scarf=p), 200
+ 
+#Winter
+ 
 @app.route('/all')
 @app.route('/all/winterstyle')
 def winterstyle():
@@ -297,37 +526,69 @@ def winterstyle():
 @app.route('/all/winterstyle')
 @app.route('/all/winterstyle/top')
 def all_winterstyle_top():
- start = '<img src="'
- url = url_for('static', filename='img/tops/poncho.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Navy Poncho Top":
+       print item
+       p = item
+
+ return render_template('poncho.html', poncho=p), 200
 
 @app.route('/all')
 @app.route('/all/winterstyle')
 @app.route('/all/winterstyle/bottom')
 def all_winterstyle_bottom():
- start = '<img src="'
- url = url_for('static', filename='img/bottoms/blackleggings.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Ankle length leggings (black)":
+       print item
+       p = item
+
+ return render_template('leggings.html', leggings=p), 200
 
 @app.route('/all')
 @app.route('/all/winterstyle')
 @app.route('/all/winterstyle/shoes')
 def all_winterstyle_shoes():
- start = '<img src="'
- url = url_for('static', filename='img/shoes/longboots.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "Dark Brown Longboots":
+       print item
+       p = item
+
+ return render_template('longboots.html', longboots=p), 200
 
 @app.route('/all')
 @app.route('/all/winterstyle')
 @app.route('/all/winterstyle/accessory')
 def all_winterstyle_accessory():
- start = '<img src="'
- url = url_for('static', filename='img/accessories/hatgloves.jpg')
- end = '">'
- return start+url+end, 200
+ clothes = []
+ with open('static/js/fashion.json', 'r') as f:
+     clothes = json.load(f)
+     f.close()
+
+ p = {}
+ for item in clothes:
+     if item['name'] == "People Tree Grey Gloves and Hat":
+       print item
+       p = item
+
+ return render_template('hatgloves.html', hatgloves=p), 200
  
 #Error Notice (wrong url)
 @app.errorhandler (404)

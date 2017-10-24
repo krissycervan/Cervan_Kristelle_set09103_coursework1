@@ -1,5 +1,4 @@
-[
-	 {
+[ {
 	 "name": "Black Floral Top",
 	 "desc": "A casual wrap spring fall boho blouse, with a v neck three quarter length cotton fabric."
 	 },
@@ -12,7 +11,7 @@
 	  "desc": "A wide fit women's pink shoes, suede style finish with comfortable fit. Perfect to wear from day to night."
 	 },
 	 {
-	  "name":"Floral Hair Accessory",
+	  "name":"Flower Hair Accessory",
 	  "desc": "A stretchable hair accessory with flowers perfect for spring and summer."
 	 },
 	 
@@ -55,7 +54,7 @@
 	 },
 
 	 {
-	  "name": "Blue Poncho Top",
+	  "name": "Navy Poncho Top",
 	  "desc": "Perfect for Winter, Hip length, a chunky and cable knit with acrylic and wool materials."
 	 },
 	 {
@@ -71,6 +70,6 @@
 	  "desc": "Hand knitted in 100% pure wool, and pompoms are from strands of recycled wool for an extra echo touch perfect for winter."
 	 }
 	 
-  ]
+]
 	 
  
