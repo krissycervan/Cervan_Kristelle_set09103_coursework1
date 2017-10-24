@@ -1,4 +1,5 @@
-from flask import Flask, render_template, url_for, abort, json
+from flask import Flask, render_template, url_for, abort, request
+import json
 app = Flask(__name__)
 #routes to main pages and images
 @app.route('/')
@@ -587,7 +588,6 @@ def all_winterstyle_accessory():
      if item['name'] == "People Tree Grey Gloves and Hat":
        print item
        p = item
-
  return render_template('hatgloves.html', hatgloves=p), 200
  
 #Error Notice (wrong url)
@@ -596,10 +596,7 @@ def page_not_found(error):
  return " <h1><em>Sorry! <p>Couldn't find the page you requested.</p><em></h1>", 404
 
 
-
- 
-
-#allows the website to run on python
+#run website 
 if __name__ == "__main__":
  app.run(host='0.0.0.0', debug=True)
 

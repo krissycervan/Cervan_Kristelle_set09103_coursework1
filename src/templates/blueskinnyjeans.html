@@ -27,10 +27,13 @@
   <div class="gallery">
       <img src="{{ url_for('static', filename='img/bottoms/jeans.jpg') }}"
         width="600" height="400"></a>
+		<br><br><br><br>
     <div class="desc">
-		{% for desc in bluejeans.desc %}
+	
+		    {% for desc in bluejeans.desc %}
             	{{ desc }}
         	{% endfor %}
+			
 	</div>
   </div>
 </div>

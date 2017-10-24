@@ -1,75 +1,66 @@
-[ {
-	 "name": "Black Floral Top",
-	 "desc": "A casual wrap spring fall boho blouse, with a v neck three quarter length cotton fabric."
-	 },
-	 {
-	  "name": "White Trouser",
-	  "desc": "A mid waist/rise. Straight cut jeans."
-	 },
-	 {
-	  "name": "Pink Shoes",
-	  "desc": "A wide fit women's pink shoes, suede style finish with comfortable fit. Perfect to wear from day to night."
-	 },
-	 {
-	  "name":"Flower Hair Accessory",
-	  "desc": "A stretchable hair accessory with flowers perfect for spring and summer."
-	 },
-	 
-	 {
-	  "name":"Stripes Croptop",
-	  "desc": "A horizontal stripes croptop, perfect for summer time with ruffle, flattering bardot neckline."
-	 },
-	 
-	 {
-	  "name": "Blue Denim Shorts",
-	  "desc": "Short, high-waisted, 5-pocket shorts in washed denim made from organic cotton with hard-worn details. Button fly and sewn-in turn-ups with raw edges at the hems."
-	 },
-	 
-	 
-	 {
-	  "name": "Tan Sandals",
-	  "desc": "Tan Sandals perfect for summer holiday, a suede sandals with 2 inch heels."
-	 },
-	 
-	 {
-	  "name": "Cateye Sunglass",
-	  "desc": "100% UVA & UVB sunglasses for women with gold detailing on the edge for a more sleek look perfect for summer."
-	 },
-	 
-	 {
-	  "name": "Purple Knit Sweater",
-	  "desc": "Pullover Acrylic Cotton top with Vneck and Solid Pattern perfect for Fall and Winter Seasons."
-	 },
-	 {
-	  "name": "Blue Skinny Jeans",
-	  "desc": "In a perennially cool high-waisted fit,skinny jean that we fell in love with all those years ago. Crafted in authentic mid blue cotton blend for our signature soft denim feel, the ankle-grazing style includes multiple pockets, perfect for all occassionsions."
-	 },
-	 {
-	  "name": "Faux Suede Ankle Boots",
-	  "desc": "Perfect for Fall, details a pair of faux suede ankle booties featuring a matte zip-up side, a faux wood block heel, and a slightly pointed toe.."
-	 },
-	  {
-	  "name": "Classic Waffle Knit Scarf (Grey)",
-	  "desc": "TearAway adhesive fabric label. Thick waffle knit. Perfect for Cold weathers. Washing Instructions Hand wash only, iron on low heat."
-	 },
-
-	 {
-	  "name": "Navy Poncho Top",
-	  "desc": "Perfect for Winter, Hip length, a chunky and cable knit with acrylic and wool materials."
-	 },
-	 {
-	  "name": "Ankle length leggings (black)",
-	  "desc": "Our obsession with leggings isn't going anywhere. Invest in new fits and fabrics with our improved pair. Comes in a classic ankle length and quality finish."
-	 },
-	 {
-	  "name": "Dark Brown Longboots",
-	  "desc": "A leather Dark brown Long boots perfect for wet and cold seasons."
-	 },
-	 {
-	  "name": "People Tree Grey Gloves and Hat",
-	  "desc": "Hand knitted in 100% pure wool, and pompoms are from strands of recycled wool for an extra echo touch perfect for winter."
-	 }
-	 
+[  
+   {  
+      "name":"Black Floral Top",
+      "desc":"A casual wrap spring fall boho blouse, with a v neck three quarter length cotton fabric."
+   },
+   {  
+      "name":"White Trouser",
+      "desc":"A mid waist/rise. Straight cut jeans."
+   },
+   {  
+      "name":"Pink Shoes",
+      "desc":"A wide fit women's pink shoes, suede style finish with comfortable fit. Perfect to wear from day to night."
+   },
+   {  
+      "name":"Flower Hair Accessory",
+      "desc":"A stretchable hair accessory with flowers perfect for spring and summer."
+   },
+   {  
+      "name":"Stripes Croptop",
+      "desc":"A horizontal stripes croptop, perfect for summer time with ruffle, flattering bardot neckline."
+   },
+   {  
+      "name":"Blue Denim Shorts",
+      "desc":"Short, high-waisted, 5-pocket shorts in washed denim made from organic cotton with hard-worn details. Button fly and sewn-in turn-ups with raw edges at the hems."
+   },
+   {  
+      "name":"Tan Sandals",
+      "desc":"Tan Sandals perfect for summer holiday, a suede sandals with 2 inch heels."
+   },
+   {  
+      "name":"Cateye Sunglass",
+      "desc":"100% UVA & UVB sunglasses for women with gold detailing on the edge for a more sleek look perfect for summer."
+   },
+   {  
+      "name":"Purple Knit Sweater",
+      "desc":"Pullover Acrylic Cotton top with Vneck and Solid Pattern perfect for Fall and Winter Seasons."
+   },
+   {  
+      "name":"Blue Skinny Jeans",
+      "desc":"In a perennially cool high-waisted fit,skinny jean that we fell in love with all those years ago. Crafted in authentic mid blue cotton blend for our signature soft denim feel, the ankle-grazing style includes multiple pockets, perfect for all occassionsions."
+   },
+   {  
+      "name":"Faux Suede Ankle Boots",
+      "desc":"Perfect for Fall, details a pair of faux suede ankle booties featuring a matte zip-up side, a faux wood block heel, and a slightly pointed toe.."
+   },
+   {  
+      "name":"Classic Waffle Knit Scarf (Grey)",
+      "desc":"TearAway adhesive fabric label. Thick waffle knit. Perfect for Cold weathers. Washing Instructions Hand wash only, iron on low heat."
+   },
+   {  
+      "name":"Navy Poncho Top",
+      "desc":"Perfect for Winter, Hip length, a chunky and cable knit with acrylic and wool materials."
+   },
+   {  
+      "name":"Ankle length leggings (black)",
+      "desc":"Our obsession with leggings isn't going anywhere. Invest in new fits and fabrics with our improved pair. Comes in a classic ankle length and quality finish."
+   },
+   {  
+      "name":"Dark Brown Longboots",
+      "desc":"A leather Dark brown Long boots perfect for wet and cold seasons."
+   },
+   {  
+      "name":"People Tree Grey Gloves and Hat",
+      "desc":"Hand knitted in 100% pure wool, and pompoms are from strands of recycled wool for an extra echo touch perfect for winter."
+   }
 ]
-	 
- 
