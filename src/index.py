@@ -10,8 +10,8 @@ def index():
 @app.route('/tops')
 def tops():
  return render_template('tops.html'), 200
- 
- 
+
+#print will allow to show it to the html page.
 @app.route('/tops')
 @app.route('/tops/floral')
 def tops_floral():
@@ -596,7 +596,7 @@ def page_not_found(error):
  return " <h1><em>Sorry! <p>Couldn't find the page you requested.</p><em></h1>", 404
 
 
-#run website 
+#allows to run website on the browser
 if __name__ == "__main__":
  app.run(host='0.0.0.0', debug=True)
 
