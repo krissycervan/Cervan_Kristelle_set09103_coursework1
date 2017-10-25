@@ -249,7 +249,7 @@ def accessories_sunglasses():
 
  p = {}
  for item in clothes:
-     if item['name'] == "Cateye Sunglasses":
+     if item['name'] == "Cateye Sunglass":
        print item
        p = item
 
