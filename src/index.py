@@ -1,38 +1,44 @@
+#python flask
 from flask import Flask, render_template, url_for, abort, request
 import json
 app = Flask(__name__)
-#routes to main pages and images
+#"print" will allow to show it to the html page.
+#"routes" are for mapping URLs to application actions, and conversely to generate URLs
+#"def" define a function
+# "with" Use file to refer to the file object
+#"in" is used to look inside an object.
 @app.route('/')
 @app.route('/index')
 def index():
+#redirect to url 
  return render_template('index.html'), 200
-
 @app.route('/tops')
 def tops():
+#redirect to url 
  return render_template('tops.html'), 200
-
-#print will allow to show it to the html page.
+ 
 @app.route('/tops')
 @app.route('/tops/floral')
 def tops_floral():
- clothes = []
- with open('static/js/fashion.json', 'r') as f:
+ clothes = [] #this refers json file  array objects 
+
+ with open('static/js/fashion.json', 'r') as f:  # Use file to refer to the file object
      clothes = json.load(f)
      f.close()
 
- p = {}
+ p = {} #this refers to the objects in the json file
  for item in clothes:
      if item['name'] == "Black Floral Top":
        print item
        p = item
-
+#redirect to url 
  return render_template('blackfloral.html', blackfloral=p), 200
  
 @app.route('/tops')
 @app.route('/tops/croptop')
 def tops_croptop():
- clothes = []
- with open('static/js/fashion.json', 'r') as f:
+ clothes = [] 
+ with open('static/js/fashion.json', 'r') as f: 
      clothes = json.load(f)
      f.close()
 
@@ -41,7 +47,7 @@ def tops_croptop():
      if item['name'] == "Stripes Croptop":
        print item
        p = item
-
+#redirect to url 
  return render_template('croptop.html', croptop=p), 200
  
 @app.route('/tops')
@@ -57,7 +63,7 @@ def tops_chokersweater():
      if item['name'] == "Purple Knit Sweater":
        print item
        p = item
-
+#redirect to url 
  return render_template('purplesweater.html', sweater=p), 200
 
 @app.route('/tops')
@@ -73,11 +79,12 @@ def tops_poncho():
      if item['name'] == "Navy Poncho Top":
        print item
        p = item
-
+#redirect to url 
  return render_template('poncho.html', poncho=p), 200
 
 @app.route('/bottoms')
 def bottoms():
+#redirect to url 
  return render_template('bottoms.html'), 200
 
 @app.route('/botoms')
@@ -93,7 +100,7 @@ def bottoms_whitetrouser():
      if item['name'] == "White Trouser":
        print item
        p = item
-
+#redirect to url 
  return render_template('whitetrouser.html', whitetrouser=p), 200
  
 @app.route('/bottoms')
@@ -109,7 +116,7 @@ def bottoms_jeans():
      if item['name'] == "Blue Skinny Jeans":
        print item
        p = item
-
+#redirect to url 
  return render_template('blueskinnyjeans.html', bluejeans=p), 200
  
 @app.route('/bottoms')
@@ -125,7 +132,7 @@ def bottoms_shorts():
      if item['name'] == "Blue Denim Shorts":
        print item
        p = item
-
+#redirect to url 
  return render_template('blueshorts.html', shorts=p), 200
 
 @app.route('/bottoms')
@@ -141,13 +148,14 @@ def bottoms_leggings():
      if item['name'] == "Ankle length leggings (black)":
        print item
        p = item
-
+#redirect to url 
  return render_template('leggings.html', leggings=p), 200
  
 
 
 @app.route('/shoes')
 def shoes():
+#redirect to url 
  return render_template('shoes.html'), 200
 
 @app.route('/shoes')
@@ -163,7 +171,7 @@ def shoes_pinkshoes():
      if item['name'] == "Pink Shoes":
        print item
        p = item
-
+#redirect to url 
  return render_template('pinkshoes.html', pinkshoes=p), 200
  
  
@@ -180,7 +188,7 @@ def shoes_sandals():
      if item['name'] == "Tan Sandals":
        print item
        p = item
-
+#redirect to url 
  return render_template('sandals.html', sandals=p), 200
  
  
@@ -197,7 +205,7 @@ def shoes_ankleboots():
      if item['name'] == "Faux Suede Ankle Boots":
        print item
        p = item
-
+#redirect to url 
  return render_template('ankleboots.html', ankleboots=p), 200
  
 
@@ -214,12 +222,13 @@ def shoes_longboots():
      if item['name'] == "Dark Brown Longboots":
        print item
        p = item
-
+#redirect to url 
  return render_template('longboots.html', longboots=p), 200
  
 
 @app.route('/accessories')
 def accessories():
+#redirect to url 
  return render_template('accessories.html'), 200
  
 @app.route('/accessories')
@@ -235,7 +244,7 @@ def accessories_hairaccessory():
      if item['name'] == "Flower Hair Accessory":
        print item
        p = item
-
+#redirect to url 
  return render_template('hairacc.html', hairacc=p), 200
  
  
@@ -252,7 +261,7 @@ def accessories_sunglasses():
      if item['name'] == "Cateye Sunglass":
        print item
        p = item
-
+#redirect to url 
  return render_template('sunglasses.html', sunglasses=p), 200
  
  
@@ -269,7 +278,7 @@ def accessories_scarf():
      if item['name'] == "Classic Waffle Knit Scarf (Grey)":
        print item
        p = item
-
+#redirect to url 
  return render_template('scarf.html', scarf=p), 200
  
 
@@ -286,7 +295,7 @@ def accessories_hatgloves():
      if item['name'] == "People Tree Grey Gloves and Hat":
        print item
        p = item
-
+#redirect to url 
  return render_template('hatgloves.html', hatgloves=p), 200
  
 
@@ -298,6 +307,7 @@ def all():
 @app.route('/all')
 @app.route('/all/springstyle')
 def springstyle():
+#redirect to url 
  return render_template('springstyle.html'), 200
  
 @app.route('/all')
@@ -314,7 +324,7 @@ def all_springstyle_top():
      if item['name'] == "Black Floral Top":
        print item
        p = item
-
+#redirect to url 
  return render_template('blackfloral.html', blackfloral=p), 200
 
 @app.route('/all')
@@ -331,7 +341,7 @@ def all_springstyle_bottom():
      if item['name'] == "Black Floral Top":
        print item
        p = item
-
+#redirect to url 
  return render_template('whitetrouser.html', whitetrouser=p), 200
 
 @app.route('/all')
@@ -348,7 +358,7 @@ def all_springstyle_shoes():
      if item['name'] == "Pink Shoes":
        print item
        p = item
-
+#redirect to url 
  return render_template('pinkshoes.html', pinkshoes=p), 200
 
 @app.route('/all')
@@ -365,13 +375,14 @@ def all_springstyle_accessory():
      if item['name'] == "Flower Hair Accessory":
        print item
        p = item
-
+#redirect to url 
  return render_template('hairacc.html', hairacc=p), 200
  
 #Summer
 @app.route('/all')
 @app.route('/all/summerstyle')
 def summerstyle():
+#redirect to url 
  return render_template('summerstyle.html'), 200
  
 @app.route('/all')
@@ -388,7 +399,7 @@ def all_summerstyle_top():
      if item['name'] == "Stripes Croptop":
        print item
        p = item
-
+#redirect to url 
  return render_template('croptop.html', croptop=p), 200
 
 @app.route('/all')
@@ -405,7 +416,7 @@ def all_summerstyle_bottom():
      if item['name'] == "Blue Denim Shorts":
        print item
        p = item
-
+#redirect to url 
  return render_template('blueshorts.html', shorts=p), 200
 
 @app.route('/all')
@@ -422,7 +433,7 @@ def all_summerstyle_shoes():
      if item['name'] == "Tan Sandals":
        print item
        p = item
-
+#redirect to url 
  return render_template('sandals.html', sandals=p), 200
 
 @app.route('/all')
@@ -439,13 +450,14 @@ def all_summerstyle_accessory():
      if item['name'] == "Cateye Sunglass":
        print item
        p = item
-
+#redirect to url 
  return render_template('sunglasses.html', sunglasses=p), 200
 
 #Fall
 @app.route('/all')
 @app.route('/all/fallstyle')
 def fallstyle():
+#redirect to url 
  return render_template('fallstyle.html'), 200
 
 @app.route('/all')
@@ -462,7 +474,7 @@ def all_fallstyle_top():
      if item['name'] == "Purple Knit Sweater":
        print item
        p = item
-
+#redirect to url 
  return render_template('purplesweater.html', sweater=p), 200
 
 @app.route('/all')
@@ -479,7 +491,7 @@ def all_fallstyle_bottom():
      if item['name'] == "Blue Skinny Jeans":
        print item
        p = item
-
+#redirect to url 
  return render_template('blueskinnyjeans.html', bluejeans=p), 200
 
 @app.route('/all')
@@ -496,7 +508,7 @@ def all_fallstyle_shoes():
      if item['name'] == "Faux Suede Ankle Boots":
        print item
        p = item
-
+#redirect to url 
   return render_template('ankleboots.html', ankleboots=p), 200
 
 @app.route('/all')
@@ -513,7 +525,7 @@ def all_fallstyle_accessory():
      if item['name'] == "Classic Waffle Knit Scarf (Grey)":
        print item
        p = item
-
+#redirect to url 
  return render_template('scarf.html', scarf=p), 200
  
 #Winter
@@ -521,6 +533,7 @@ def all_fallstyle_accessory():
 @app.route('/all')
 @app.route('/all/winterstyle')
 def winterstyle():
+#redirect to url 
  return render_template('winterstyle.html'), 200
 
 @app.route('/all')
@@ -537,7 +550,7 @@ def all_winterstyle_top():
      if item['name'] == "Navy Poncho Top":
        print item
        p = item
-
+#redirect to url 
  return render_template('poncho.html', poncho=p), 200
 
 @app.route('/all')
@@ -554,7 +567,7 @@ def all_winterstyle_bottom():
      if item['name'] == "Ankle length leggings (black)":
        print item
        p = item
-
+#redirect to url 
  return render_template('leggings.html', leggings=p), 200
 
 @app.route('/all')
@@ -571,7 +584,7 @@ def all_winterstyle_shoes():
      if item['name'] == "Dark Brown Longboots":
        print item
        p = item
-
+#redirect to url 
  return render_template('longboots.html', longboots=p), 200
 
 @app.route('/all')
@@ -588,6 +601,7 @@ def all_winterstyle_accessory():
      if item['name'] == "People Tree Grey Gloves and Hat":
        print item
        p = item
+#redirect to url 
  return render_template('hatgloves.html', hatgloves=p), 200
  
 #Error Notice (wrong url)
@@ -596,7 +610,7 @@ def page_not_found(error):
  return " <h1><em>Sorry! <p>Couldn't find the page you requested.</p><em></h1>", 404
 
 
-#allows to run website on the browser
+#This allows the app to run website on the browser
 if __name__ == "__main__":
  app.run(host='0.0.0.0', debug=True)
 
